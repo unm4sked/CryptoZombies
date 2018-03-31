@@ -1,6 +1,6 @@
 pragma solidity ^0.4.19;
 
-contract ZombieFactory {
+contract zombieFactory {
 
     event NewZombie(uint zombieId, string name, uint dna);
 
@@ -16,7 +16,7 @@ contract ZombieFactory {
 
     // declare mappings here
 
-    function _createZombie(string _name, uint _dna) private {
+    function _createZombie(string _name, uint _dna) internal {
         uint id = zombies.push(Zombie(_name, _dna)) - 1;
         NewZombie(id, _name, _dna);
     } 
